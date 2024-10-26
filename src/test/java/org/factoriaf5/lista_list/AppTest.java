@@ -37,9 +37,16 @@ class HandlerWeekDaysTest {
         assertEquals(6, handler.getSizeList());
         assertFalse(handler.dayExist("Martes"));
     }
-    
+
     @Test
     void testGetSpecificDayByName() {
         assertEquals("Viernes", handler.getSpecificDayByName("Viernes"));
         assertNull(handler.getSpecificDayByName("InvalidDay"));
+    }
+
+    @Test
+    void testGetSpecificDayByIndex() {
+        assertEquals("Lunes", handler.getSpecificDayByIndex(0));
+        assertEquals("Domingo", handler.getSpecificDayByIndex(6));
+        assertNull(handler.getSpecificDayByIndex(7));
     }
