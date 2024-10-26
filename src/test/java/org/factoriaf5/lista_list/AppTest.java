@@ -56,3 +56,10 @@ class HandlerWeekDaysTest {
         assertTrue(handler.dayExist("Sábado"));
         assertFalse(handler.dayExist("NoExistente"));
     }
+
+    @Test
+    void testSortByAlphabet() {
+        handler.sortByAlphabet();
+        assertEquals("Domingo", handler.getDays().get(0));
+        assertEquals("Viernes", handler.getDays().get(6));
+    }
