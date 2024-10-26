@@ -63,3 +63,10 @@ class HandlerWeekDaysTest {
         assertEquals("Domingo", handler.getDays().get(0));
         assertEquals("Viernes", handler.getDays().get(6));
     }
+
+    @Test
+    void testEmptyList() {
+        handler.emptyList();
+        assertEquals(0, handler.getSizeList());
+    }
+}
