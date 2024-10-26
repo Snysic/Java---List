@@ -30,10 +30,16 @@ class HandlerWeekDaysTest {
     void testGetSizeList() {
         assertEquals(7, handler.getSizeList());
     }
-    
+
     @Test
     void testDeleteDay() {
         handler.deleteDay("Martes");
         assertEquals(6, handler.getSizeList());
         assertFalse(handler.dayExist("Martes"));
+    }
+    
+    @Test
+    void testGetSpecificDayByName() {
+        assertEquals("Viernes", handler.getSpecificDayByName("Viernes"));
+        assertNull(handler.getSpecificDayByName("InvalidDay"));
     }
