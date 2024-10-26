@@ -25,3 +25,8 @@ class HandlerWeekDaysTest {
         assertTrue(days.contains("Lunes"));
         assertTrue(days.contains("Domingo"));
     }
+    
+    @Test
+    void testGetSizeList() {
+        assertEquals(7, handler.getSizeList());
+    }
